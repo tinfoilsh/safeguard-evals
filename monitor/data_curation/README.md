@@ -27,12 +27,12 @@ We only ever _add_ anchors.
     └──────────────  REAPPLY re-sweep  ◀──────────────────┘   (repeat)
 ```
 
-The sweep drops known bots and accumulates repeated prefixes as candidates. Regroup re-unites
+The sweep drops known bots and accumulates repeated prefixes as candidates. Regroup reunites
 bot families whose fronts vary. A human reviews the families (`view_regroup.py`), promotes the
 good ones by pasting the _induced_ regex (`regroup_candidates.py --induce`) into
 `regex_anchors.json`, then re-sweeps with `REAPPLY=1` to apply the new anchors. Repeat until
 clean. Per-anchor removal counts are not stored — they are regenerable from a **full** sweep's
-printed tally
+printed tally.
 
 ## Files
 
@@ -72,7 +72,7 @@ printed tally
    `regroup.html`) prints a paste-ready anchor entry; add it to `regex_anchors.json`. Run
    `python validate_anchors.py`.
 6. `REAPPLY=1 python sweep_shards.py` — re-filter the checkpoints with the new anchors.
-7. Repeat 3–6 until the store is clean, or until all the clusters left aren't worth removing.
+7. Repeat 3–6 until the store is clean, or until none of the remaining clusters are worth removing.
 
 Downstream: `python build_subset.py` samples an early-weighted working subset from
 `data/curated/wildchat_curated.parquet` into `data/subsets/`.

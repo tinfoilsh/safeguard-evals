@@ -4,7 +4,7 @@
 asks a model whether the **assistant** crossed one of the hard-no lines (the
 5 categories in `HARD_NO_POLICY`).
 
-You can swap in any model - we tried out both gpt-oss and gpt-oss-safeguard.
+You can swap in any model; we tried both gpt-oss and gpt-oss-safeguard.
 
 ```bash
 CONVERSATIONS=convs.parquet TARGET=oss       BASE_URL=http://localhost:8000/v1 python run_monitor.py
@@ -32,7 +32,7 @@ CONVERSATIONS=sample.jsonl BASE_URL=http://localhost:8000/v1 python run_monitor.
 
 ## Bring your own WildChat
 
-WildChat Full is gated, but there is an un-gated set here [https://huggingface.co/datasets/allenai/WildChat-4.8M] without the toxic data
+WildChat Full is gated, but an ungated set without the toxic data is available at <https://huggingface.co/datasets/allenai/WildChat-4.8M>.
 
 ```python
 from datasets import load_dataset
@@ -45,7 +45,7 @@ Then `CONVERSATIONS=wildchat.parquet python run_monitor.py`.
 
 ## Second opinion
 
-Empirically, oss-safeguard can get confused. We solve this by escalating to a larger model like Kimi-k3. We've found that priming kimi with the judge response and asking it to re-examine works better than naively re-judging.
+Empirically, oss-safeguard can get confused. We solve this by escalating to a larger model like Kimi-K3. We've found that priming Kimi with the judge response and asking it to re-examine works better than naively re-judging.
 
 ```bash
 python build_flagged.py --conversations wildchat.parquet --monitor results/monitor_safeguard.jsonl

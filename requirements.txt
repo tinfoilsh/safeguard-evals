@@ -1,0 +1,5 @@
+openai==2.30.0
+python-dotenv==1.0.1
+pyarrow==23.0.1
+numpy>=1.26
+matplotlib==3.11.1

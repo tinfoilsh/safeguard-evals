@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+*.html
+!template.html
+evals/logs/
+monitor/results/
+monitor/data_curation/data/
+monitor/data_curation/output/

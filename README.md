@@ -72,6 +72,15 @@ The benchmark questions are vendored under `evals/benchmarks/`. Attribution:
 - **HarmBench** (text behaviors, 300 prompts) — Center for AI Safety, MIT —
   <https://github.com/centerforaisafety/HarmBench>
 
-Monitor tuning and false-positive analysis use real-world
-conversations from **WildChat-4.8M-Full** — Yuntian Deng et al. (AI2), ODC-BY —
-<https://huggingface.co/datasets/yuntian-deng/WildChat-4.8M-Full>.
+Our analysis uses **WildChat-4.8M-Full**, created by Yuntian Deng et al.
+(AI2) and licensed under [ODC Attribution
+1.0](https://huggingface.co/datasets/allenai/WildChat/raw/main/LICENSE.md).
+The dataset is downloaded separately and is not redistributed in this
+repository.
+
+## License
+
+Unless otherwise noted, Tinfoil-authored code and documentation in this
+repository are licensed under the [Apache License 2.0](LICENSE). Third-party
+datasets under `evals/benchmarks/` are excluded and remain subject to their
+respective upstream licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -37,6 +37,7 @@ MODELS = [
     "kimi-k3",
     "deepseek-v4-flash",
     "deepseek-v4-1-flash",
+    "deepseek-v4-1-flash-1017",
     "glm-5-3",
     "glm-5-3-flash",
 ]
@@ -48,6 +49,7 @@ MODEL_LABELS = {
     "llama3-3-70b": "llama3-3-\n70b",
     "deepseek-v4-flash": "deepseek-\nv4-flash",
     "deepseek-v4-1-flash": "deepseek-\nv4-1-flash",
+    "deepseek-v4-1-flash-1017": "deepseek-\nv4-1-flash-\n1017",
     "glm-5-3-flash": "glm-5-3-\nflash",
 }
 

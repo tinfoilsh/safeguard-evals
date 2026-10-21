@@ -37,6 +37,7 @@ MODELS = [
     "kimi-k3",
     "deepseek-v4-flash",
     "deepseek-v4-1-flash",
+    "deepseek-v4-1-flash-1017",
     "glm-5-3",
     "glm-5-3-flash",
 ]
@@ -48,6 +49,7 @@ MODEL_LABELS = {
     "llama3-3-70b": "llama3-3-\n70b",
     "deepseek-v4-flash": "deepseek-\nv4-flash",
     "deepseek-v4-1-flash": "deepseek-\nv4-1-flash",
+    "deepseek-v4-1-flash-1017": "deepseek-\nv4-1-flash-\n1017",
     "glm-5-3-flash": "glm-5-3-\nflash",
 }
 
@@ -124,11 +126,22 @@ def label_bars(ax, xs, stats):
         )
 
 
+def logo_path(model):
+    """Variants of one upstream model share a logo: try the full model name,
+    then strip trailing -segments (deepseek-v4-1-flash-1017 ... deepseek)."""
+    parts = model.split("-")
+    for end in range(len(parts), 0, -1):
+        path = LOGOS / ("-".join(parts[:end]) + ".png")
+        if path.exists():
+            return path
+    return None
+
+
 def add_logos(ax, xs, models):
     for xi, model in zip(xs, models):
-        path = LOGOS / f"{model}.png"
-        if not path.exists():
-            print(f"missing logo {path}")
+        path = logo_path(model)
+        if path is None:
+            print(f"missing logo for {model}")
             continue
         img = plt.imread(path)
         # OffsetImage is dpi-corrected, so zoom maps source pixels to points.

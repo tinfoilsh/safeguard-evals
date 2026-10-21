@@ -108,7 +108,7 @@ All Tinfoil models are run with production configurations (we use vLLM with most
 - llama3-3-70b — [confidential-llama3-3-70b](https://github.com/tinfoilsh/confidential-llama3-3-70b)
 - kimi-k3 — [confidential-kimi-k3](https://github.com/tinfoilsh/confidential-kimi-k3)
 - deepseek-v4-flash (retired)
-- deepseek-v4-1-flash (retired)
+- deepseek-v4-1-flash (superseded by 1017)
 - deepseek-v4-1-flash-1017 — [confidential-deepseek-v4-1-flash](https://github.com/tinfoilsh/confidential-deepseek-v4-1-flash), with the [DeepSeek-V4.1-Flash-1017](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017) checkpoint
 - glm-5-3 — [confidential-glm5-3-nvfp4](https://github.com/tinfoilsh/confidential-glm5-3-nvfp4)
 - glm-5-3-flash (retired)

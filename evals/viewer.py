@@ -41,6 +41,7 @@ JUDGE_FILES = {
     "deepseek-v4-1-flash": "judge_results_gpt-4.1-mini_deepseek-v4-1-flash.json",
     "deepseek-v4-1-flash-1017": "judge_results_gpt-4.1-mini_deepseek-v4-1-flash-1017.json",
     "kimi-k3": "judge_results_gpt-4.1-mini_kimi-k3.json",
+    "kimi-k3-1-pro": "judge_results_gpt-4.1-mini_kimi-k3-1-pro.json",
     "glm-5-3": "judge_results_gpt-4.1-mini_glm-5-3.json",
     "glm-5-3-flash": "judge_results_gpt-4.1-mini_glm-5-3-flash.json",
 }

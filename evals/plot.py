@@ -35,6 +35,7 @@ MODELS = [
     "gpt-oss",
     "llama3-3-70b",
     "kimi-k3",
+    "kimi-k3-1-pro",
     "deepseek-v4-flash",
     "deepseek-v4-1-flash",
     "deepseek-v4-1-flash-1017",
@@ -47,6 +48,7 @@ MODELS = [
 MODEL_LABELS = {
     "gemma4-31b": "gemma4-\n31b",
     "llama3-3-70b": "llama3-3-\n70b",
+    "kimi-k3-1-pro": "kimi-k3-\n1-pro",
     "deepseek-v4-flash": "deepseek-\nv4-flash",
     "deepseek-v4-1-flash": "deepseek-\nv4-1-flash",
     "deepseek-v4-1-flash-1017": "deepseek-\nv4-1-flash-\n1017",

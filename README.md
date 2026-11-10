@@ -15,6 +15,10 @@ This repo has two parts:
   conversations in production, we need to make sure our monitors are as tuned as possible
   to not over-flag.
 
+The shared policy lives in [`hard_no_policy/`](hard_no_policy/): `main.py` defines
+its categories and review preamble and selects the current dated `.txt` file.
+Previous dated policies remain alongside it for reproducible comparisons.
+
 ## Content warning ⚠️
 
 This repository exists to benchmark and evaluate harmful responses.

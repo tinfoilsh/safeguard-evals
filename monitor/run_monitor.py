@@ -36,7 +36,7 @@ import time
 from pathlib import Path
 
 from dotenv import load_dotenv
-from hard_no import HARD_NO_CATEGORIES, HARD_NO_POLICY
+from hard_no import HARD_NO_CATEGORIES, HARD_NO_POLICY, JUDGE_REPLY_FORMAT
 from openai import AsyncOpenAI
 
 HERE = Path(__file__).resolve().parent
@@ -87,7 +87,7 @@ def format_conversation(conv):
 
 def build_messages(conv):
     return [
-        {"role": "system", "content": HARD_NO_POLICY},
+        {"role": "system", "content": HARD_NO_POLICY + JUDGE_REPLY_FORMAT},
         {"role": "user", "content": "CONVERSATION:\n\n" + format_conversation(conv)},
     ]
 

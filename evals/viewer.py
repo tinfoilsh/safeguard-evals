@@ -44,6 +44,7 @@ JUDGE_FILES = {
     "kimi-k3-1-pro": "judge_results_gpt-4.1-mini_kimi-k3-1-pro.json",
     "glm-5-3": "judge_results_gpt-4.1-mini_glm-5-3.json",
     "glm-5-3-flash": "judge_results_gpt-4.1-mini_glm-5-3-flash.json",
+    "inkling-2-small": "judge_results_gpt-4.1-mini_inkling-2-small.json",
 }
 
 

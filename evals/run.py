@@ -125,6 +125,8 @@ async def process(client, jclient, jsem, item, t0, out_fh, wlock):
         msg = r.choices[0].message
         rec["response"] = msg.content or ""
         rec["reasoning"] = _reasoning_of(msg)
+        rec["finish_reason"] = r.choices[0].finish_reason
+        rec["usage"] = r.usage.model_dump() if r.usage else None
         rec["ok"] = True
     except Exception as e:
         rec["response"] = f"__ERROR__ {type(e).__name__}: {e}"

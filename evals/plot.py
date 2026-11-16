@@ -41,6 +41,7 @@ MODELS = [
     "deepseek-v4-1-flash-1017",
     "glm-5-3",
     "glm-5-3-flash",
+    "inkling-2-small",
 ]
 
 # Keep enlarged labels legible without widening the figure (which would make
@@ -53,6 +54,7 @@ MODEL_LABELS = {
     "deepseek-v4-1-flash": "deepseek-\nv4-1-flash",
     "deepseek-v4-1-flash-1017": "deepseek-\nv4-1-flash-\n1017",
     "glm-5-3-flash": "glm-5-3-\nflash",
+    "inkling-2-small": "inkling-2-\nsmall",
 }
 
 # Fine-grained hard-no categories (the `hardnos` field) -> broad display group.
